@@ -1,4 +1,7 @@
 
+from . import weapon
+
+
 def create_person(nickname):
     return {
         "nickname": nickname.capitalize(),
@@ -18,5 +21,5 @@ def create_person(nickname):
             "left_arm": None,
             "right_arm": 0
         },
-        "inventory": []
+        "inventory": [weapon.create_fist()]
     }
