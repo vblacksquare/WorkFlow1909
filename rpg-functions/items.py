@@ -13,7 +13,7 @@ def create_weapon(name, description, damage):
         name=name,
         _type="weapon",
         description=description,
-        action=f"{name} наніс {{damage}} шкоди"
+        action=f"{name} наносить від {damage*0.8} до {damage*1.2} шкоди"
     )
     item["damage"] = damage
 

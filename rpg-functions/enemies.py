@@ -44,8 +44,29 @@ def create_hero(nickname):
 
 def create_peter_griffin():
     peter = create_person("Пітер Гріффін")
-    peter["stats"]["health"]=100000000
-    peter["stats"]["defense"]=10000000
-    peter["stats"]["level"]=10000000000000000
+    peter["stats"]["health"] = 100000000
+    peter["stats"]["defense"] = 10000000
+    peter["stats"]["level"] = 10000000000000000
 
     return peter
+
+
+def create_bum():
+    bum = create_person("бомж, як він тут оказався :()")
+    bum["stats"]["health"] = 999
+
+    return bum
+
+
+def create_weak_blob():
+    blob = create_person("Слайм")
+    blob["stats"]["health"] = 25
+
+    return blob
+
+
+def create_map():
+    _map = create_person("я карта " * 10)
+    _map["stats"]["health"] = 57
+
+    return _map
