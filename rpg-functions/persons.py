@@ -1,7 +1,4 @@
 
-from items import create_fist
-
-
 def create_person(nickname):
     return {
         "nickname": nickname.capitalize(),
@@ -21,16 +18,5 @@ def create_person(nickname):
             "left_arm": None,
             "right_arm": 0
         },
-        "inventory": [create_fist()]
+        "inventory": []
     }
-
-
-def create_hero(nickname):
-    hero_person = create_person(nickname)
-    return hero_person
-
-
-def create_weak_goblin():
-    goblin_person = create_person("слабкий гоблін")
-    goblin_person["stats"]["health"] = 25
-    return goblin_person
