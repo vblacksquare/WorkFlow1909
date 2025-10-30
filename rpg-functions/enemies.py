@@ -40,3 +40,12 @@ def create_ghost():
 def create_hero(nickname):
     hero = create_person(nickname)
     return hero
+
+
+def create_peter_griffin():
+    peter = create_person("Пітер Гріффін")
+    peter["stats"]["health"]=100000000
+    peter["stats"]["defense"]=10000000
+    peter["stats"]["level"]=10000000000000000
+
+    return peter
