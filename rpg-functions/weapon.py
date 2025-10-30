@@ -8,3 +8,11 @@ def create_fist():
         description="Це просто кулак",
         damage=5
     )
+
+
+def create_sword():
+    return create_weapon(
+        name="Меч",
+        description="Це просто меч",
+        damage=10
+    )
