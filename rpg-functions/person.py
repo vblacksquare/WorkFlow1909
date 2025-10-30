@@ -1,5 +1,5 @@
 
-from . import weapon
+import weapon
 
 
 def create_person(nickname):
