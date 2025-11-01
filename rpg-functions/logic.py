@@ -30,7 +30,7 @@ def fight(hero_person, enemy_person):
             chosen_option = options[option]
 
             if chosen_option['type'] == "weapon":
-                random_damage = random.randint(chosen_option["damage"] * 0.8, chosen_option["damage"] * 1.2)
+                random_damage = random.randint(chosen_option["damage"] * 8, chosen_option["damage"] * 12) / 10
                 enemy_person['stats']['health'] -= random_damage
 
                 print()
@@ -45,7 +45,7 @@ def fight(hero_person, enemy_person):
             chosen_option = options[option]
 
             if chosen_option['type'] == "weapon":
-                random_damage = random.randint(chosen_option["damage"] * 0.8, chosen_option["damage"] * 1.2)
+                random_damage = random.randint(chosen_option["damage"] * 8, chosen_option["damage"] * 12) / 10
                 hero_person['stats']['health'] -= random_damage
 
                 print()
