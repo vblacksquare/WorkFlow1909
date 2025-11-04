@@ -45,8 +45,6 @@ def create_hero(nickname):
 def create_peter_griffin():
     peter = create_person("Пітер Гріффін")
     peter["stats"]["health"] = 100000000
-    peter["stats"]["defense"] = 10000000
-    peter["stats"]["level"] = 10000000000000000
 
     return peter
 
@@ -59,7 +57,7 @@ def create_bum():
 
 
 def create_weak_blob():
-    blob = create_person("Слайм")
+    blob = create_person("Слабкий слайм")
     blob["stats"]["health"] = 25
 
     return blob
