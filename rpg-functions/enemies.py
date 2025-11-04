@@ -2,69 +2,53 @@
 from person import create_person
 
 
+#: level 1
+def create_fat_slime():
+    blob = create_person("Товстий слайм")
+    blob["stats"]["health"] = 25
+
+    return blob
+
+def create_small_slime():
+    blob = create_person("Маленький слайм")
+    blob["stats"]["health"] = 25
+
+    return blob
+
+def create_pink_slime():
+    blob = create_person("Рожевий слайм")
+    blob["stats"]["health"] = 25
+
+    return blob
+
+def create_magma_cube_boss():
+    blob = create_person("Магма куб")
+    blob["stats"]["health"] = 25
+
+    return blob
+
+
+#: level 2
 def create_weak_goblin():
     goblin = create_person("Слабкий гоблін")
     goblin["stats"]["health"] = 25
 
     return goblin
 
+def create_strong_goblin():
+    goblin = create_person("Сильний гоблін")
+    goblin["stats"]["health"] = 35
 
-def create_goblin():
-    goblin = create_person("Гоблін")
+    return goblin
+
+def create_bat():
+    goblin = create_person("Кажан")
     goblin["stats"]["health"] = 35
 
     return goblin
 
 
-def create_bat():
-    bat = create_person("Кажан")
-    bat["stats"]["health"] = 10
-
-    return bat
-
-
-def create_dragon():
-    dragon = create_person("Дракон")
-    dragon["stats"]["health"] = 110
-
-    return dragon
-
-
-def create_ghost():
-    ghost = create_person("Привид")
-    ghost["stats"]["health"] = 50
-
-    return ghost
-
-
+#: hero
 def create_hero(nickname):
     hero = create_person(nickname)
     return hero
-
-
-def create_peter_griffin():
-    peter = create_person("Пітер Гріффін")
-    peter["stats"]["health"] = 100000000
-
-    return peter
-
-
-def create_bum():
-    bum = create_person("бомж, як він тут оказався :()")
-    bum["stats"]["health"] = 999
-
-    return bum
-
-
-def create_weak_blob():
-    blob = create_person("Слабкий слайм")
-    blob["stats"]["health"] = 25
-
-    return blob
-
-
-def create_map():
-    _map = create_person("я карта " * 10)
-    _map["stats"]["health"] = 57
-
-    return _map

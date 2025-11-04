@@ -1,5 +1,7 @@
 
 import random
+import enemies
+import locations
 
 
 def fight(hero_person, enemy_person):
@@ -65,3 +67,19 @@ def fight(hero_person, enemy_person):
             print(f"{hero_person['nickname']}: {hero_person['stats']['health']} хп")
             print(f"{enemy_person['nickname']}: {enemy_person['stats']['health']} хп")
             step += 1
+
+
+def generate_level(number):
+    levels_enemies = {
+        1: locations.location1(),
+        2: [],
+        3: [],
+        4: [],
+        5: []
+    }
+
+    location = levels_enemies[number]
+    location["enemies"] = random.choices(location["enemies"], k=2)
+    location["boss"] = random.choices(location["boss"])
+
+    return location

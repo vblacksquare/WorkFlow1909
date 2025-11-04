@@ -1,9 +1,11 @@
 
-from logic import fight
-from enemies import create_hero, create_weak_goblin
+from logic import fight, generate_level
+from enemies import create_hero
 
 
 hero = create_hero("punk")
-goblin = create_weak_goblin()
 
-fight(hero, goblin)
+
+first_level = generate_level(number=1)
+
+# fight(hero, goblin)
