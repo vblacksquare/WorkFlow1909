@@ -3,11 +3,16 @@ import random
 
 
 def fight(hero_person, enemy_person):
-    print(f"<---- {hero_person['nickname']} VS {enemy_person['nickname']} ---->")
-
     turn = "hero"
 
+    print(f"<---- {hero_person['nickname']} VS {enemy_person['nickname']} ---->")
+    print(f"{hero_person['nickname']}: {hero_person['stats']['health']} хп")
+    print(f"{enemy_person['nickname']}: {enemy_person['stats']['health']} хп")
+
+    step = 2
+
     while True:
+
         if hero_person["stats"]["health"] <= 0:
             print(f"{enemy_person['nickname']} вбив {hero_person['nickname']} :((((")
             exit()
@@ -34,8 +39,7 @@ def fight(hero_person, enemy_person):
                 enemy_person['stats']['health'] -= random_damage
 
                 print()
-                print(f"Ви використали '{chosen_option['name']}'")
-                print(f"{enemy_person['nickname']} втратив {random_damage} хп: {enemy_person['stats']['health']}")
+                print(f"Ви використали '{chosen_option['name']}' і нанесли {random_damage}")
 
         else:
             options = [
@@ -48,12 +52,16 @@ def fight(hero_person, enemy_person):
                 random_damage = random.randint(chosen_option["damage"] * 8, chosen_option["damage"] * 12) / 10
                 hero_person['stats']['health'] -= random_damage
 
-                print()
-                print(f"Ворог використав '{chosen_option['name']}'")
-                print(f"{hero_person['nickname']} втратив {random_damage} хп: {hero_person['stats']['health']}")
+                print(f"Ворог використав '{chosen_option['name']}' і нанесли {random_damage}")
 
         if turn == "hero":
             turn = "enemy"
 
         else:
             turn = "hero"
+
+            print()
+            print(f"<---- Хід {step} ---->")
+            print(f"{hero_person['nickname']}: {hero_person['stats']['health']} хп")
+            print(f"{enemy_person['nickname']}: {enemy_person['stats']['health']} хп")
+            step += 1
